@@ -17,7 +17,7 @@ interface RollupOpenApiOptions {
   exclude?: FilterPattern;
 }
 
-const ext = /\(.ya?ml)|(json)$/;
+const ext = /\.(ya?ml)|(json)$/;
 
 /**
  * A Rollup and Vite plugin which converts OpenAPI YAML files to ES6 modules.

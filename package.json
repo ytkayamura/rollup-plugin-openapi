@@ -20,12 +20,17 @@
     "fix": "biome check ./src --write"
   },
   "tsup": {
-    "entry": ["src/index.ts"],
+    "entry": [
+      "src/index.ts"
+    ],
     "splitting": false,
     "sourcemap": true,
     "clean": true,
     "dts": true,
-    "format": ["cjs", "esm"]
+    "format": [
+      "cjs",
+      "esm"
+    ]
   },
   "dependencies": {
     "@apidevtools/swagger-parser": "^10.1.0",
