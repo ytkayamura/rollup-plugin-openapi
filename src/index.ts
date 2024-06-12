@@ -17,7 +17,7 @@ interface RollupOpenApiOptions {
   exclude?: FilterPattern;
 }
 
-const ext = /\.ya?ml$/;
+const ext = /\(.ya?ml)|(json)$/;
 
 /**
  * A Rollup and Vite plugin which converts OpenAPI YAML files to ES6 modules.
@@ -52,7 +52,7 @@ export default function openapi(opts: RollupOpenApiOptions = {}): Plugin {
         code: `var data = ${JSON.stringify(
           content,
           null,
-          2,
+          2
         )};\n\nexport default data;\n`,
         map: null, // Swagger CLI doesn't provide a source map
       };
